@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trivia</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--<h1>Trivia</h1>-->
+
+    <div id="options">
+        <div class="dino_caja">
+            <img src="images/rb_4627.png" alt="Cartoon" class="dino_encima"/>
+        </div>
+        <label for="category">Categoría:</label>
+        <select id="category">
+            </select>
+
+        <label for="difficulty">Dificultad:</label>
+        <select id="difficulty">
+            <option value="easy">Fácil</option>
+            <option value="medium">Medio</option>
+            <option value="hard">Difícil</option>
+        </select>
+
+        <label for="type">Tipo de respuesta:</label>
+        <select id="type">
+            <option value="multiple">Opción múltiple</option>
+            <option value="boolean">Verdadero/Falso</option>
+        </select>
+
+        <button id="startBtn">Crear Trivia</button>
+    </div>
+
+    <div id="quiz-container">
+        </div>
+
+    <div id="score">
+        </div>
+
+    <button id="newTriviaBtn">Nueva Trivia</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

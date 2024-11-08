@@ -1,0 +1,230 @@
+/* Estilos básicos para el cuerpo de la página */
+body {
+    /*font-family: sans-serif;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight:normal;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    background: url("images/6030496.jpg");
+    background-size: 120%;
+    /*background-position: center;*/
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para el contenedor de opciones */
+#options {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 1) 0px 25px 50px -12px;
+    padding: 2rem 3rem 3rem 3rem;
+    background: transparent;
+    border-radius: 29px;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    border: 12px solid #eb6166;
+}
+
+/* Estilos para las etiquetas y selectores */
+label, select {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 5px;
+    background: transparent;
+    color: #fff;
+}
+
+select {
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #fff;
+    font-family: "Raleway", serif;
+    font-size: 16px;
+}
+
+.dino_caja{
+    position: relative;
+    top: 0;
+}
+
+.dino_encima{
+    position: absolute;
+    width: 240px;
+    margin-top: -15.7rem;
+    margin-left: -7.5rem;
+    /* background: #e53c63; */
+    /* border-radius: 100%; */
+    /* box-shadow: rgba(0, 0, 0, 1) 0px 25px 50px -12px; */
+    /* border: 4px solid #711ca5; */
+    padding: 0.7rem;
+    /* background: rgb(235,100,100); */
+    /* background: radial-gradient(circle, rgba(235,100,100,1) 0%, rgba(164,36,83,1) 100%); */
+    /* background: rgb(235,100,100); */
+    /* background: linear-gradient(267deg, rgba(235,100,100,1) 0%, rgba(164,36,83,1) 100%); */
+    /* background: rgb(164,36,83); */
+    /* background: linear-gradient(267deg, rgba(164,36,83,1) 0%, rgba(235,100,100,1) 52%, rgba(164,36,83,1) 100%); */
+}
+
+/* Estilos para el contenedor del quiz */
+#quiz-container {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    background-color: rgba(255,255,255,1);
+    border-radius: 15px;
+    padding: 25px;
+    position: absolute;
+    transform: rotate(-4deg);
+    display: none;
+    background: #4c0e64;
+    color: #fff;
+}
+
+#quiz-container li{
+    margin: 1rem 0 2rem 0;
+    list-style: none;
+    /* text-align: center; */
+}
+
+#quiz-container h2{
+    font-size:2.4rem;
+    margin:3rem 0 0 0;
+    color:#eeb469;
+    text-shadow:3px 3px 3px rgba(0,0,0,0.6)
+}
+
+#options.despues::before{
+    content: '';
+    background: rgba(0,0,0,0.8);
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos para las preguntas */
+.question {
+    margin-bottom: 20px;
+}
+
+.question h3{
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+}
+
+/* Estilos para las respuestas */
+.answer {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+input[type="radio" i] {
+    height: 16px;
+    width: 16px;
+}
+
+/* Estilos para el botón de inicio */
+#startBtn, button {
+    padding: 10px 40px;
+    background-color: #e4325d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: "DynaPuff", system-ui;
+    border-radius: 30px;
+    margin: 30px auto 5px auto;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    display: block;
+}
+
+/* Estilos para el contenedor del puntaje */
+#score {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#timer{
+    text-align: center;
+    opacity: 0.5;
+}
+
+/* Estilos para el botón de nueva trivia */
+#newTriviaBtn {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    display: none; /* Ocultar el botón inicialmente */
+}
+
+.turespuesta{
+    opacity: 0.5;
+    font-family: "Raleway", serif;
+}
+
+.correct {
+    color: #89b73c;
+}
+
+.correct:before{
+    content:'\2714';
+    color: #648233;
+    display:inline-block;
+    margin:0 7px 0 0;
+    font-size:18px;
+}
+
+.incorrect {
+    color: #e4325d;
+}
+
+
+
+.incorrect:before{
+    content:'\26A0';
+    color: #b42758;
+    display:inline-block;
+    margin:0 7px 0 0;
+    font-size:18px;
+}
+
+label{
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+    margin: 1.4rem auto 0.8rem auto;
+    color: rgba(255,255,255,0.8);
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.question {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
