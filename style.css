@@ -1,4 +1,4 @@
-/* Estilos básicos para el cuerpo de la página */
+/* Estilos bÃ¡sicos para el cuerpo de la pÃ¡gina */
 body {
     /*font-family: sans-serif;*/
     display: flex;
@@ -68,19 +68,16 @@ select {
     /* box-shadow: rgba(0, 0, 0, 1) 0px 25px 50px -12px; */
     /* border: 4px solid #711ca5; */
     padding: 0.7rem;
-    /* background: rgb(235,100,100); */
-    /* background: radial-gradient(circle, rgba(235,100,100,1) 0%, rgba(164,36,83,1) 100%); */
-    /* background: rgb(235,100,100); */
-    /* background: linear-gradient(267deg, rgba(235,100,100,1) 0%, rgba(164,36,83,1) 100%); */
-    /* background: rgb(164,36,83); */
-    /* background: linear-gradient(267deg, rgba(164,36,83,1) 0%, rgba(235,100,100,1) 52%, rgba(164,36,83,1) 100%); */
+    animation-name: flo;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 
 /* Estilos para el contenedor del quiz */
 #quiz-container {
     display: flex;
     flex-direction: column;
-    width: 650px;
+    width: 700px;
     background-color: rgba(255,255,255,1);
     border-radius: 15px;
     padding: 25px;
@@ -89,17 +86,18 @@ select {
     display: none;
     background: #4c0e64;
     color: #fff;
+    box-shadow: rgba(0, 0, 0, 1) 0px 25px 50px -12px;
 }
 
 #quiz-container li{
-    margin: 1rem 0 2rem 0;
+    margin: 0.9rem 0 1.5rem 0;
     list-style: none;
     /* text-align: center; */
 }
 
 #quiz-container h2{
     font-size:2.4rem;
-    margin:3rem 0 0 0;
+    margin: 1rem 0 0 0;
     color:#eeb469;
     text-shadow:3px 3px 3px rgba(0,0,0,0.6)
 }
@@ -136,7 +134,11 @@ input[type="radio" i] {
     width: 16px;
 }
 
-/* Estilos para el botón de inicio */
+/* Estilos para el botÃ³n de inicio */
+#startBtn{
+    animation: wiggle 2s linear infinite;
+}
+
 #startBtn, button {
     padding: 10px 40px;
     background-color: #e4325d;
@@ -164,7 +166,7 @@ input[type="radio" i] {
     opacity: 0.5;
 }
 
-/* Estilos para el botón de nueva trivia */
+/* Estilos para el botÃ³n de nueva trivia */
 #newTriviaBtn {
     padding: 10px 20px;
     background-color: #008CBA;
@@ -172,7 +174,7 @@ input[type="radio" i] {
     border: none;
     cursor: pointer;
     margin-top: 20px;
-    display: none; /* Ocultar el botón inicialmente */
+    display: none; /* Ocultar el botÃ³n inicialmente */
 }
 
 .turespuesta{
@@ -224,7 +226,47 @@ h2 {
     animation: fadeIn 1s ease-in-out;
 }
 
+.globo{
+        width: 200px;
+        position: absolute;
+        bottom: -3%;
+        right: -12%;
+
+}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+@keyframes flo{
+    50%{
+      transform: translateX(100px);
+    }
+  }
+
+
+  /* Keyframes */
+@keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }

@@ -156,6 +156,7 @@ function showResults() {
         resultsHTML += '</li>';
     }
     resultsHTML += '</ul>';
+    resultsHTML += `<img src="images/globo.png" class="globo">`;
 
     quizContainer.innerHTML = resultsHTML;
     scoreContainer.textContent = '';
